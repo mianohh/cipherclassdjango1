@@ -12,8 +12,13 @@ __pycache__/
 
 # Django
 db.sqlite3
+bootstrapdjango/staticfiles/
 
 # Local configuration
 .env
 .env.*
 !.env.example
+
+# Editors / OS
+.vscode/
+.DS_Store
