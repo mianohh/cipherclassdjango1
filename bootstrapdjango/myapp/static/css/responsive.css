@@ -1,0 +1,54 @@
+/* ==========================================================================
+   Responsive overrides — Pamoja Harvest Kenya
+   Bootstrap 5 handles most layout; these refine custom components.
+   ========================================================================== */
+
+@media (max-width: 1199px) {
+  .container { max-width: 100%; }
+}
+
+@media (max-width: 991px) {
+  .slider_section { padding: 50px 0 70px; }
+  .slider_item-container { min-height: 0; }
+  .slider_img-box { margin-top: 40px; width: 70%; }
+  .quote_btn-container { margin-top: 14px; margin-bottom: 8px; }
+  .navbar-collapse { padding-top: 8px; }
+}
+
+@media (max-width: 767px) {
+  .layout_padding,
+  .layout_padding-top,
+  .layout_padding-bottom { padding: 56px 0; }
+
+  .slider_item-detail h1 { font-size: 2.2rem; }
+  .slider_item-detail p { font-size: .95rem; }
+  .slider_img-box { width: 75%; margin: 40px auto 0; }
+
+  .custom_heading { font-size: 1.7rem; }
+  .custom_heading-text { font-size: .95rem; margin-bottom: 30px; }
+
+  .fruit_section .row.layout_padding2 > [class*="col-"]:last-child { order: -1; }
+  .fruit_detail-box { text-align: center; }
+  .fruit_detail-box p { margin-left: auto; margin-right: auto; }
+  .fruit_section .row.layout_padding2 > [class*="col-"] .fruit_detail-box > div { display: flex; justify-content: center; }
+
+  .client_img-box { width: 200px; }
+  .client_img-box img { height: 200px; }
+
+  .contact_section { background-size: 130px; }
+  .contact_section form { padding: 24px 20px; }
+
+  .info_section .col-md-3 { text-align: center; margin-bottom: 32px; }
+  .info_section .col-md-3:last-child { margin-bottom: 0; }
+  .info_section .social-box { justify-content: center; }
+  .info_section .form_container form { max-width: 100%; margin: 0 auto; }
+
+  .tasty_section { background-attachment: scroll; min-height: 300px; }
+  .map_section, .map_section #map { height: 320px; min-height: 320px; }
+}
+
+@media (max-width: 575px) {
+  .slider_item-container .slider_item-detail { text-align: center; }
+  .slider_item-container .slider_item-detail .d-flex { justify-content: center; }
+  .custom_dark-btn, .custom_orange-btn { min-width: 130px; padding: 11px 18px; }
+}

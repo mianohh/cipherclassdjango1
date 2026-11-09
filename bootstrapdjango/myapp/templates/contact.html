@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Contact Us — Pamoja Harvest Kenya{% endblock %}
+{% block contact_active %}active{% endblock %}
+{% block hero_class %}sub_pages{% endblock %}
+
+{% block hero %}
+<section class="page_banner">
+  <h1>Contact Pamoja</h1>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Contact us</li>
+    </ol>
+  </nav>
+  <p>Talk to us about fresh produce, orders and partnerships.</p>
+</section>
+{% endblock %}
+
+{% block content %}
+<!-- ===== Contact form + details ===== -->
+<section class="contact_section layout_padding">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-7">
+        <h2 class="font-weight-bold">Send us a message</h2>
+        <form action="">
+          <div class="contact_form-container">
+            <div>
+              <div><input type="text" placeholder="Name" /></div>
+              <div><input type="text" placeholder="Phone Number" /></div>
+              <div><input type="email" placeholder="Email" /></div>
+              <div class="mt-4"><textarea rows="5" placeholder="Message"></textarea></div>
+              <div class="mt-4"><button type="submit">Send</button></div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="card border-0 shadow-sm h-100" style="background:var(--forest);color:#d8e4da;border-radius:var(--radius);">
+          <div class="card-body p-4 p-lg-5">
+            <h3 class="mb-4" style="color:var(--leaf);">Get in touch</h3>
+            <p class="mb-4" style="color:#b7c8bb;font-size:.95rem;">
+              Whether you need a regular supply for your kitchen or a one-off
+              order, our team is ready to help.
+            </p>
+            <ul class="list-unstyled mb-0">
+              <li class="d-flex align-items-start mb-3">
+                <span class="me-3" style="color:var(--orange);font-size:1.2rem;">&#9742;</span>
+                <span>+254 700 000 000</span>
+              </li>
+              <li class="d-flex align-items-start mb-3">
+                <span class="me-3" style="color:var(--orange);font-size:1.2rem;">&#9993;</span>
+                <span>hello@pamojaharvest.co.ke</span>
+              </li>
+              <li class="d-flex align-items-start mb-3">
+                <span class="me-3" style="color:var(--orange);font-size:1.2rem;">&#9873;</span>
+                <span>Nairobi, Kenya</span>
+              </li>
+              <li class="d-flex align-items-start">
+                <span class="me-3" style="color:var(--orange);font-size:1.2rem;">&#9737;</span>
+                <span>Mon&ndash;Sat, 8:00&ndash;18:00</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end contact -->
+
+<!-- ===== Map ===== -->
+<section class="map_section">
+  <div id="map" class="h-100 w-100"></div>
+</section>
+<!-- end map -->
+{% endblock %}

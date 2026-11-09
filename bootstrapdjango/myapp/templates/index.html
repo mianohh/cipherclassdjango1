@@ -1,0 +1,283 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Pamoja Harvest Kenya — Fresh produce from Kenyan farms{% endblock %}
+{% block home_active %}active{% endblock %}
+
+{% block hero %}
+<!-- ===== Slider ===== -->
+<section class="slider_section position-relative">
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
+    <div class="carousel-inner">
+      {% for item in '012'|make_list %}
+      <div class="carousel-item {% if forloop.first %}active{% endif %}">
+        <div class="slider_item-box">
+          <div class="slider_item-container">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <div class="slider_item-detail">
+                    <div>
+                      <h1>Welcome to<br />Kenyan <span>Fresh Produce</span></h1>
+                      <p>
+                        {% if forloop.counter0 == 0 %}
+                          We source quality produce from trusted Kenyan farms
+                          and deliver it fresh to homes, restaurants and
+                          businesses across Nairobi.
+                        {% elif forloop.counter0 == 1 %}
+                          From farm to table, we make it easier to eat well
+                          while creating dependable markets for local growers.
+                        {% else %}
+                          Freshness you can trust, fair partnerships you can
+                          feel good about, and service built around you.
+                        {% endif %}
+                      </p>
+                      <div class="d-flex gap-3">
+                        <a href="/fruit/" class="custom_orange-btn">Explore produce</a>
+                        <a href="/contact/" class="custom_dark-btn">Contact Pamoja</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="slider_img-box">
+                    <div>
+                      <img src="{% static 'images/slide-img.png' %}" alt="Fresh Kenyan produce" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="custom_carousel-control">
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- end slider -->
+{% endblock %}
+
+{% block content %}
+<!-- ===== Services ===== -->
+<section class="service_section layout_padding">
+  <div class="container">
+    <div class="heading-center">
+      <h2 class="custom_heading">What We Do</h2>
+      <p class="custom_heading-text">
+        We connect Kenyan growers with people and businesses that value quality, consistency and responsible sourcing.
+      </p>
+    </div>
+    <div class="layout_padding2">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card">
+            <img class="card-img-top" src="{% static 'images/card-item-1.png' %}" alt="Oranges" />
+            <div class="card-body">
+              <h5 class="card-title">Orange</h5>
+              <p class="card-text">
+                Our produce is selected at peak freshness and handled carefully from harvest to delivery.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img class="card-img-top" src="{% static 'images/card-item-2.png' %}" alt="Grapes" />
+            <div class="card-body">
+              <h5 class="card-title">Grapes</h5>
+              <p class="card-text">
+                We give restaurants and households dependable access to flavourful produce grown in Kenya.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img class="card-img-top" src="{% static 'images/card-item-3.png' %}" alt="Guava" />
+            <div class="card-body">
+              <h5 class="card-title">Guava</h5>
+              <p class="card-text">
+                Every order supports farmer partnerships built on transparency, respect and fair value.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <a href="/service/" class="custom_dark-btn">Learn more</a>
+    </div>
+  </div>
+</section>
+<!-- end services -->
+
+<!-- ===== Fruits ===== -->
+<section class="fruit_section">
+  <div class="container">
+    <div class="heading-center">
+      <h2 class="custom_heading">Fresh From Kenya</h2>
+      <p class="custom_heading-text">
+        Discover seasonal produce grown by Kenyan farmers and chosen for flavour, freshness and value.
+      </p>
+    </div>
+
+    <div class="row layout_padding2 align-items-center">
+      <div class="col-md-8">
+        <div class="fruit_detail-box">
+          <h3>Makueni Oranges</h3>
+          <p class="mt-3 mb-4">
+            Sweet, juicy and carefully handled from orchard to table. Our
+            oranges bring the sunshine of Makueni to every order.
+          </p>
+          <div><a href="/fruit/" class="custom_dark-btn">Order now</a></div>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex justify-content-center align-items-center">
+        <div class="fruit_img-box">
+          <img src="{% static 'images/orange.png' %}" alt="Makueni oranges" width="250px" />
+        </div>
+      </div>
+    </div>
+
+    <div class="row layout_padding2 align-items-center">
+      <div class="col-md-8">
+        <div class="fruit_detail-box">
+          <h3>Naivasha Grapes</h3>
+          <p class="mt-3 mb-4">
+            Crisp, naturally sweet and selected from trusted growers around
+            Naivasha for a fresh snack or elegant table.
+          </p>
+          <div><a href="/fruit/" class="custom_dark-btn">Order now</a></div>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex justify-content-center align-items-center">
+        <div class="fruit_img-box">
+          <img src="{% static 'images/grapes.png' %}" alt="Naivasha grapes" width="100px" />
+        </div>
+      </div>
+    </div>
+
+    <div class="row layout_padding2-top layout_padding-bottom align-items-center">
+      <div class="col-md-8">
+        <div class="fruit_detail-box">
+          <h3>Embu Guavas</h3>
+          <p class="mt-3 mb-4">
+            Fragrant and full of flavour, our Embu guavas are a delicious
+            reminder of Kenya's rich growing regions.
+          </p>
+          <div><a href="/fruit/" class="custom_dark-btn">Order now</a></div>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex justify-content-center align-items-center">
+        <div class="fruit_img-box">
+          <img src="{% static 'images/gauva.png' %}" alt="Embu guavas" width="250px" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end fruits -->
+
+<!-- ===== Tasty banner ===== -->
+<section class="tasty_section">
+  <div class="container-fluid">
+    <h2>The taste of Kenya</h2>
+  </div>
+</section>
+
+<!-- ===== Clients ===== -->
+<section class="client_section layout_padding">
+  <div class="container">
+    <div class="heading-center">
+      <h2 class="custom_heading">Trusted by our customers</h2>
+      <p class="custom_heading-text">
+        Customers choose Pamoja for fresh produce, clear communication and a service they can count on.
+      </p>
+    </div>
+    <div id="carouselExampleControls-2" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        {% for item in '012'|make_list %}
+        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+          <div class="client_container layout_padding2 d-flex flex-column flex-md-row justify-content-center align-items-center gap-4">
+            <div class="client_img-box">
+              <!-- Portrait: Jeffmugendi, Wikimedia Commons, CC BY-SA 4.0. -->
+              <img src="{% static 'images/client-kenyan.png' %}" alt="Kenyan customer portrait" />
+            </div>
+            <div class="client_detail">
+              <div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <h3>Wanjiku, Nairobi</h3>
+              <p class="custom_heading-text">
+                {% if forloop.counter0 == 0 %}
+                  Pamoja Harvest gives our kitchen reliable quality and a
+                  steady supply of produce that is proudly Kenyan. The team is
+                  responsive, professional and easy to work with.
+                {% elif forloop.counter0 == 1 %}
+                  Our deliveries arrive fresh, well presented and ready for
+                  service. Pamoja has become a partner we trust.
+                  <br />&mdash; A Nairobi restaurant owner
+                {% else %}
+                  We love knowing where our food comes from and supporting
+                  growers in our own country. Fresh, convenient and full of flavour.
+                {% endif %}
+              </p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="custom_carousel-control">
+        <a class="carousel-control-prev" href="#carouselExampleControls-2" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls-2" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end clients -->
+
+<!-- ===== Contact ===== -->
+<section class="contact_section layout_padding">
+  <div class="container">
+    <h2 class="font-weight-bold">Contact Pamoja</h2>
+    <div class="row">
+      <div class="col-md-8 mr-auto">
+        <form action="">
+          <div class="contact_form-container">
+            <div>
+              <div><input type="text" placeholder="Name" /></div>
+              <div><input type="text" placeholder="Phone Number" /></div>
+              <div><input type="email" placeholder="Email" /></div>
+              <div class="mt-4"><textarea rows="4" placeholder="Message"></textarea></div>
+              <div class="mt-4"><button type="submit">Send</button></div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end contact -->
+
+<!-- ===== Map ===== -->
+<section class="map_section">
+  <div id="map" class="h-100 w-100"></div>
+</section>
+<!-- end map -->
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Fresh Produce — Pamoja Harvest Kenya{% endblock %}
+{% block fruit_active %}active{% endblock %}
+{% block hero_class %}sub_pages{% endblock %}
+
+{% block hero %}
+<section class="page_banner">
+  <h1>Fresh Produce</h1>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Produce</li>
+    </ol>
+  </nav>
+  <p>We select produce from trusted growers and bring each harvest to you at its freshest.</p>
+</section>
+{% endblock %}
+
+{% block content %}
+<!-- ===== Fruits ===== -->
+<section class="fruit_section layout_padding-top">
+  <div class="container">
+    <div class="heading-center">
+      <h2 class="custom_heading">Fresh From Kenya</h2>
+      <p class="custom_heading-text">
+        We select produce from trusted growers and bring each harvest to you at its freshest.
+      </p>
+    </div>
+
+    <div class="row layout_padding2 align-items-center">
+      <div class="col-md-8">
+        <div class="fruit_detail-box">
+          <h3>Makueni Oranges</h3>
+          <p class="mt-3 mb-4">
+            Sweet, juicy and carefully handled from orchard to table. Our
+            oranges bring the sunshine of Makueni to every order.
+          </p>
+          <div><a href="/contact/" class="custom_dark-btn">Order now</a></div>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex justify-content-center align-items-center">
+        <div class="fruit_img-box">
+          <img src="{% static 'images/orange.png' %}" alt="Makueni oranges" width="250px" />
+        </div>
+      </div>
+    </div>
+
+    <div class="row layout_padding2 align-items-center">
+      <div class="col-md-8">
+        <div class="fruit_detail-box">
+          <h3>Naivasha Grapes</h3>
+          <p class="mt-3 mb-4">
+            Crisp and naturally sweet, these grapes are selected from
+            trusted growers around Naivasha for everyday enjoyment.
+          </p>
+          <div><a href="/contact/" class="custom_dark-btn">Order now</a></div>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex justify-content-center align-items-center">
+        <div class="fruit_img-box">
+          <img src="{% static 'images/grapes.png' %}" alt="Naivasha grapes" width="100px" />
+        </div>
+      </div>
+    </div>
+
+    <div class="row layout_padding2-top layout_padding-bottom align-items-center">
+      <div class="col-md-8">
+        <div class="fruit_detail-box">
+          <h3>Embu Guavas</h3>
+          <p class="mt-3 mb-4">
+            Fragrant, colourful and full of flavour, our Embu guavas make
+            a delicious snack or a bright addition to any meal.
+          </p>
+          <div><a href="/contact/" class="custom_dark-btn">Order now</a></div>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex justify-content-center align-items-center">
+        <div class="fruit_img-box">
+          <img src="{% static 'images/gauva.png' %}" alt="Embu guavas" width="250px" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end fruits -->
+{% endblock %}

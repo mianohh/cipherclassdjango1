@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}What We Do — Pamoja Harvest Kenya{% endblock %}
+{% block service_active %}active{% endblock %}
+{% block hero_class %}sub_pages{% endblock %}
+
+{% block hero %}
+<section class="page_banner">
+  <h1>What We Do</h1>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">What we do</li>
+    </ol>
+  </nav>
+  <p>Practical produce solutions for households, hospitality teams and Kenyan growers.</p>
+</section>
+{% endblock %}
+
+{% block content %}
+<!-- ===== Services ===== -->
+<section class="service_section layout_padding">
+  <div class="container">
+    <div class="heading-center">
+      <h2 class="custom_heading">What We Do</h2>
+      <p class="custom_heading-text">
+        Practical produce solutions for households, hospitality teams and Kenyan growers.
+      </p>
+    </div>
+    <div class="layout_padding2">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card">
+            <img class="card-img-top" src="{% static 'images/card-item-1.png' %}" alt="Oranges" />
+            <div class="card-body">
+              <h5 class="card-title">Orange</h5>
+              <p class="card-text">
+                Source fresh Kenyan citrus with dependable quality and delivery
+                for your home, office or kitchen.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img class="card-img-top" src="{% static 'images/card-item-2.png' %}" alt="Grapes" />
+            <div class="card-body">
+              <h5 class="card-title">Grapes</h5>
+              <p class="card-text">
+                Enjoy carefully selected grapes with flexible ordering and
+                responsive support for every delivery.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img class="card-img-top" src="{% static 'images/card-item-3.png' %}" alt="Guava" />
+            <div class="card-body">
+              <h5 class="card-title">Guava</h5>
+              <p class="card-text">
+                Build a stronger supply chain with a partner that values
+                Kenyan growers, quality and long-term relationships.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <a href="/contact/" class="custom_dark-btn">Get in touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Approach strip ===== -->
+<section class="fruit_section layout_padding">
+  <div class="container">
+    <div class="heading-center">
+      <h2 class="custom_heading">Our Approach</h2>
+      <p class="custom_heading-text">
+        From sourcing to delivery, we keep quality and people at the centre of everything we do.
+      </p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 text-center">
+          <div class="card-body">
+            <h5 class="card-title">Responsible sourcing</h5>
+            <p class="card-text">We work directly with Kenyan growers, paying fair value and choosing produce at its peak.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 text-center">
+          <div class="card-body">
+            <h5 class="card-title">Careful handling</h5>
+            <p class="card-text">Every order is selected, checked and packed so freshness and quality arrive intact.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 text-center">
+          <div class="card-body">
+            <h5 class="card-title">Reliable delivery</h5>
+            <p class="card-text">Flexible quantities and clear communication keep homes, offices and kitchens well supplied.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
